@@ -6,9 +6,8 @@ namespace Lab1
         {
             bool answer = false;
 
-            // code here
-
-            // end
+            if (a > 0 && b > 0 && c > 0 || a < 0 && b < 0 && c < 0 || a == b && b == c)
+                answer = true;
 
             return answer;
         }
@@ -16,9 +15,8 @@ namespace Lab1
         {
             bool answer = false;
 
-            // code here
-
-            // end
+            if (a%b==0)
+                answer = true;
 
             return answer;
         }
@@ -26,9 +24,10 @@ namespace Lab1
         {
             bool answer = false;
 
-            // code here
-
-            // end
+            if (Math.Pow(a, 0.5) == b || Math.Pow(b, 0.5) == a || Math.Pow(a,3)==b || Math.Pow(b,3)==a)
+            {
+                answer = true;
+            }
 
             return answer;
         }
@@ -36,9 +35,7 @@ namespace Lab1
         {
             double answer = 0;
 
-            // code here
-
-            // end
+            answer=Math.Pow(f,2)-4*d*g
 
             return answer;
         }
@@ -46,9 +43,22 @@ namespace Lab1
         {
             double answer = 0;
 
-            // code here
+            
+            if (x <= -1)
+            {
+                answer = 1;
+            }
+            else if (-1< x && x <= 1)
+            {
 
-            // end
+                //-0 подходит?
+                //если нет, то пишем: if (x==0){answer = 0} else {answer =-x}
+                answer = -x;
+            }
+            else if (x > 1)
+            {
+                answer = -1;
+            }
 
             return answer;
         }
@@ -56,10 +66,12 @@ namespace Lab1
         {
             bool answer = false;
 
-            // code here
-
-            // end
-
+            double diag = squareS*Math.Sqrt(2)
+            double diam= Math.Pow(circleS/Math.PI,0.5)*2
+            if (diag <= diam)
+            {
+                answer = true;
+            }    
             return answer;
         }
 
@@ -67,9 +79,33 @@ namespace Lab1
         {
             int answer = 0;
 
-            // code here
-
-            // end
+            if (s)
+            {
+                if (t)
+                {
+                    answer = 6;
+                }
+                else if (f)
+                {
+                    answer = 10;
+                }
+                else
+                {
+                    answer = 2;
+                }
+            }
+            else if (t)
+            {
+                answer = 3;
+            }
+            else if (f)
+            {
+                answer = 5;
+            }
+            else
+            {
+                answer = 1;
+            }
 
             return answer;
         }
@@ -78,9 +114,13 @@ namespace Lab1
             bool answer = false;
             const int bank = 10000;
 
-            // code here
-            
-            // end
+            int avr = Math.Ceiling(pupils / 7);
+            int s = 5 * pupils + avr * salary;
+            if (year % 4 == 0 && s <= 10000)
+            {
+                answer = true;
+            }
+        
 
             return answer;
         }
