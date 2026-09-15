@@ -113,9 +113,9 @@ namespace Lab1
         {
             bool answer = false;
             const int bank = 10000;
-
-            int avr = Math.Ceiling(pupils / 7);
-            int s = 5 * pupils + avr * salary;
+            double avr =pupils/7;
+            avr = Math.Ceiling(avr);
+            double s = (5 * pupils) + (avr * salary);
             if (year % 4 == 0 && s <= 10000)
             {
                 answer = true;
