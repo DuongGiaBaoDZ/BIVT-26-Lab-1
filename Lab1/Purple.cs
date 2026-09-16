@@ -11,20 +11,28 @@ namespace Lab1
 
             return answer;
         }
+
         public bool Task2(int a, int b)
         {
             bool answer = false;
 
-            if (a%b==0)
+            if (b!= 0 && a%b== 0)
+            {
+               answer = true;
+                
+            }
+            else if (a != 0 && b % a == 0)
+            {
                 answer = true;
-
-            return answer;
+            }
+            
+        return answer;
         }
         public bool Task3(int a, int b)
         {
             bool answer = false;
 
-            if (Math.Pow(a, 0.5) == b || Math.Pow(b, 0.5) == a || Math.Pow(a,3)==b || Math.Pow(b,3)==a)
+            if (Math.Pow(a,2)==b || Math.Pow(b,2)==a || Math.Pow(a,3)==b || Math.Pow(b,3)==a)
             {
                 answer = true;
             }
@@ -35,7 +43,7 @@ namespace Lab1
         {
             double answer = 0;
 
-            answer=Math.Pow(f,2)-4*d*g
+            answer = Math.Pow(f, 2) - 4 * d * g;
 
             return answer;
         }
@@ -66,8 +74,8 @@ namespace Lab1
         {
             bool answer = false;
 
-            double diag = squareS*Math.Sqrt(2)
-            double diam= Math.Pow(circleS/Math.PI,0.5)*2
+            double diag = Math.Pow(squareS,0.5) * Math.Sqrt(2);
+            double diam = Math.Pow(circleS / Math.PI, 0.5) * 2;
             if (diag <= diam)
             {
                 answer = true;
@@ -112,17 +120,25 @@ namespace Lab1
         public bool Task8(int year, int pupils, int salary)
         {
             bool answer = false;
+            
             const int bank = 10000;
-            double avr =pupils/7;
+            
+            double avr =pupils/7.0;
             avr = Math.Ceiling(avr);
             double s = (5 * pupils) + (avr * salary);
-            if (year % 4 == 0 && s <= 10000)
+            if (s <= bank && year % 4 != 0)
             {
                 answer = true;
             }
-        
-
+            else if (s <= bank && year % 4 == 0)
+            {
+                if (year % 100 == 0)
+                {
+                    answer = false;
+                }
+            }
             return answer;
         }
     }
 }
+
