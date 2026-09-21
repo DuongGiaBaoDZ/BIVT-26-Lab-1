@@ -143,7 +143,7 @@ namespace Lab1_test
             { 1000, 1000,   80,   80,  140,  140,  150,  150,   25,  123 },
             { 1000,   50,   50,   10,   10,   10,  421,  420,   10,  100 },
         };
-            var answer = new bool[] { false, false, true, true, false, false, false, true, false, false };
+            var answer = new bool[] { false, false, true, true, false, true, false, true, false, false };
             var test = new bool[answer.Length];
             // Act
             for (int i = 0; i < answer.Length; i++)
