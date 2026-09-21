@@ -134,7 +134,12 @@ namespace Lab1
             {
                 if (year % 100 == 0)
                 {
-                    answer = false;
+                    if (year % 400 == 0)
+                        answer = false;
+                    else
+                    {
+                        answer = true;
+                    }
                 }
             }
             return answer;
