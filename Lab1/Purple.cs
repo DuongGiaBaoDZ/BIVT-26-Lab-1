@@ -6,36 +6,29 @@ namespace Lab1
         {
             bool answer = false;
 
-            if (a > 0 && b > 0 && c > 0 || a < 0 && b < 0 && c < 0 || a == b && b == c)
-                answer = true;
+            // code here
+
+            // end
 
             return answer;
         }
-
         public bool Task2(int a, int b)
         {
             bool answer = false;
 
-            if (b!= 0 && a%b== 0)
-            {
-               answer = true;
-                
-            }
-            else if (a != 0 && b % a == 0)
-            {
-                answer = true;
-            }
-            
-        return answer;
+            // code here
+
+            // end
+
+            return answer;
         }
         public bool Task3(int a, int b)
         {
             bool answer = false;
 
-            if (Math.Pow(a,2)==b || Math.Pow(b,2)==a || Math.Pow(a,3)==b || Math.Pow(b,3)==a)
-            {
-                answer = true;
-            }
+            // code here
+
+            // end
 
             return answer;
         }
@@ -43,7 +36,9 @@ namespace Lab1
         {
             double answer = 0;
 
-            answer = Math.Pow(f, 2) - 4 * d * g;
+            // code here
+
+            // end
 
             return answer;
         }
@@ -51,22 +46,9 @@ namespace Lab1
         {
             double answer = 0;
 
-            
-            if (x <= -1)
-            {
-                answer = 1;
-            }
-            else if (-1< x && x <= 1)
-            {
+            // code here
 
-                //-0 подходит?
-                //если нет, то пишем: if (x==0){answer = 0} else {answer =-x}
-                answer = -x;
-            }
-            else if (x > 1)
-            {
-                answer = -1;
-            }
+            // end
 
             return answer;
         }
@@ -74,12 +56,10 @@ namespace Lab1
         {
             bool answer = false;
 
-            double diag = Math.Pow(squareS,0.5) * Math.Sqrt(2);
-            double diam = Math.Pow(circleS / Math.PI, 0.5) * 2;
-            if (diag <= diam)
-            {
-                answer = true;
-            }    
+            // code here
+
+            // end
+
             return answer;
         }
 
@@ -87,63 +67,22 @@ namespace Lab1
         {
             int answer = 0;
 
-            if (s)
-            {
-                if (t)
-                {
-                    answer = 6;
-                }
-                else if (f)
-                {
-                    answer = 10;
-                }
-                else
-                {
-                    answer = 2;
-                }
-            }
-            else if (t)
-            {
-                answer = 3;
-            }
-            else if (f)
-            {
-                answer = 5;
-            }
-            else
-            {
-                answer = 1;
-            }
+            // code here
+
+            // end
 
             return answer;
         }
         public bool Task8(int year, int pupils, int salary)
         {
             bool answer = false;
-            
             const int bank = 10000;
+
+            // code here
             
-            double avr =pupils/7.0;
-            avr = Math.Ceiling(avr);
-            double s = (5 * pupils) + (avr * salary);
-            if (s <= bank && year % 4 != 0)
-            {
-                answer = true;
-            }
-            else if (s <= bank && year % 4 == 0)
-            {
-                if (year % 100 == 0)
-                {
-                    if (year % 400 == 0)
-                        answer = false;
-                    else
-                    {
-                        answer = true;
-                    }
-                }
-            }
+            // end
+
             return answer;
         }
     }
 }
-
